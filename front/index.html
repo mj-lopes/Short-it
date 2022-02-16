@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./script/script.js" defer></script>
+
+    <title>Short it!</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>
+          <img
+            class="align-center"
+            src="./assets/short-it-logo.png"
+            alt="logo da short it"
+          />
+        </h1>
+        <h2 class="align-text">Encurtador de links</h2>
+      </header>
+
+      <div class="card row card-css">
+        <form class="col s12 input-url">
+          <div class="input-field">
+            <input id="link" type="text" />
+            <label for="link">Link</label>
+            <span class="helper-text">Ensira o link para ser encurtado</span>
+          </div>
+          <button class="waves-effect waves-light btn" type="submit">
+            SHORT IT!
+          </button>
+        </form>
+      </div>
+
+      <div class="card card-css align-text">
+        <p class="shortened-link"></p>
+      </div>
+
+      <section class="como-funciona">
+        <button class="waves-effect waves-light btn como-funciona">
+          COMO FUNCIONA?
+        </button>
+        <div class="como-funciona-lista">
+          <ul class="collection">
+            <li class="collection-item">
+              <div class="list-item">
+                <i class="material-icons">add_circle_outline</i>
+                <p>Ao adicionar a URL, a mesma é mandada ao back-end...</p>
+              </div>
+            </li>
+            <li class="collection-item">
+              <div class="list-item">
+                <i class="material-icons">save</i>
+                <p>
+                  Que é salva na database, e gerado um link menor através de um
+                  hash.
+                </p>
+              </div>
+            </li>
+            <li class="collection-item">
+              <div class="list-item">
+                <i class="material-icons">search</i>
+                <p>
+                  Ao abrir o link, é realizado uma busca na database, o qual é
+                  realizada a procura pelo o link original...
+                </p>
+              </div>
+            </li>
+            <li class="collection-item">
+              <div class="list-item">
+                <i class="material-icons">send</i>
+                <p>
+                  Que ao ser encontrado, é devolvido ao navegador para que o
+                  mesmo redirecione o usuário ao local do link original.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
